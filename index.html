@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="./estilos/main.css">
+	<title>Sistema de gestion de alumnos</title>
+</head>
+<body>
+	<div id="nav">
+		<a href="#cargar-alumno" class="nav-item">Registrar alumno</a>
+		<a href="#consultar-alumno" class="nav-item">Consultar alumno</a>
+	</div>
+
+	<div class="container">
+
+		<div class="interfaz" id="cargar-alumno">
+			<h4>Registrar alumno</h4>
+			<hr>
+
+			<form>
+				<h5 class="mt-4">Datos personales</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="tipo-documento">Tipo de documento</label>
+				    	<select class="form-control" id="tipo-documento">
+				    		<option>Elija una opción</option>
+					    	<option>DNI</option>
+					    	<option>CI</option>
+					    	<option>LE</option>
+					    	<option>LC</option>
+					    	<option>Pasaporte</option>
+					    </select>
+				    </div>
+				    <div class="form-group col-md-6">
+				    	<label for="numero-documento">Número de documento</label>
+				    	<input type="number" min="1" class="form-control" id="numero-documento" placeholder="Sin puntos ni guiones. Ej: 12345678">
+				  	</div>
+				</div>
+
+				<div class="form-group">
+				    <label for="nombres">Nombres</label>
+				    <input type="text" class="form-control" id="nombres">
+				</div>
+
+				<div class="form-group">
+				    <label for="apellidos">Apellidos</label>
+				    <input type="text" class="form-control" id="apellidos">
+				</div>
+
+				<div class="form-group">
+				    <label for="fecha-nacimiento">Fecha de nacimiento</label>
+				    <input type="date" class="form-control" id="fecha-nacimiento">
+				</div>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="nacionalidad">Nacionalidad</label>
+				    	<select class="form-control" id="nacionalidad">
+				    		<option>Elija una opción</option>
+					    	<option>Argentino</option>
+					    	<option>Uruguayo</option>
+					    	<option>Boliviano</option>
+					    	<option>Paraguayo</option>
+					    	<option>Chileno</option>
+					    	<option>Brasilero</option>
+					    </select>
+				    </div>
+				    <div class="form-group col-md-6">
+				    	<label for="sexo">Sexo</label>
+				    	<select class="form-control" id="sexo">
+				    		<option>Elija una opción</option>
+					    	<option>Femenino</option>
+					    	<option>Masculino</option>
+					    </select>
+				  	</div>
+				</div>
+
+				<h5 class="mt-4">Datos de contacto</h5>
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="telefono">Teléfono</label>
+				    	<input type="text" class="form-control" id="telefono" placeholder="Sin espacios ni guiones. Ej: 43479092">
+				    </div>
+				    <div class="form-group col-md-6">
+				    	<label for="email">Email</label>
+				    	<input type="email" class="form-control" id="email">
+				  	</div>
+				</div>
+
+				<h5 class="mt-4">Domicilio</h5>
+				<div class="form-row">
+				    <div class="form-group col-md-8">
+				    	<label for="calle-nombre">Calle</label>
+				    	<input type="text" class="form-control" id="calle-nombre">
+				    </div>
+				    <div class="form-group col-md-4">
+				    	<label for="calle-numero">Número</label>
+				    	<input type="number" min="1" class="form-control" id="calle-numero" placeholder="Sin puntos. Ej: 1289">
+				  	</div>
+				</div>
+
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="provincia">Provincia</label>
+				    	<select class="form-control" id="provincia">
+				    		<option>Elija una opción</option>
+				    		<option>Ciudad Autónoma de Buenos Aires</option>
+					    	<option>Provincia de Buenos Aires</option>
+					    	<option>...</option>
+					    </select>
+				    </div>
+				    <div class="form-group col-md-6">
+				    	<label for="localidad">Localidad</label>
+				    	<select class="form-control" id="localidad">
+				    		<option>Elija una opción</option>
+					    	<option>Agronomía</option>
+							<option>Almagro</option>
+							<option>Balvanera</option>
+							<option>Barracas</option>
+							<option>Belgrano</option>
+							<option>...</option>
+					    </select>
+				  	</div>
+				</div>
+
+				<h5 class="mt-4">Selección de curso</h5>
+				<div class="form-group">
+				    <label for="curso">Curso</label>
+				    <select class="form-control" id="curso">
+			    		<option>Elija una opción</option>
+				    	<option>1° A</option>
+						<option>1° B</option>
+						<option>1° C</option>
+						<option>1° D</option>
+						<option>2° A</option>
+						<option>...</option>
+				    </select>
+				</div>
+
+				<h5 class="mt-4">Datos personales del responsable (padre, madre o tutor)</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="tipo-documento-responsable">Tipo de documento del responsable</label>
+				    	<select class="form-control" id="tipo-documento-responsable">
+				    		<option>Elija una opción</option>
+					    	<option>DNI</option>
+					    	<option>CI</option>
+					    	<option>LE</option>
+					    	<option>LC</option>
+					    	<option>Pasaporte</option>
+					    </select>
+				    </div>
+				    <div class="form-group col-md-6">
+				    	<label for="numero-documento-responsable">Número de documento del responsable</label>
+				    	<input type="number" min="1" class="form-control" id="numero-documento-responsable" placeholder="Sin puntos ni guiones. Ej: 12345678">
+				  	</div>
+				</div>
+
+				<div class="form-group">
+				    <label for="nombres-responsable">Nombres del responsable</label>
+				    <input type="text" class="form-control" id="nombres-responsable">
+				</div>
+
+				<div class="form-group">
+				    <label for="apellidos-responsable">Apellidos del responsable</label>
+				    <input type="text" class="form-control" id="apellidos-responsable">
+				</div>
+
+				<div class="form-group">
+				    <label for="fecha-nacimiento-responsable">Fecha de nacimiento del responsable</label>
+				    <input type="date" class="form-control" id="fecha-nacimiento-responsable">
+				</div>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="nacionalidad-responsable">Nacionalidad del responsable</label>
+				    	<select class="form-control" id="nacionalidad-responsable">
+				    		<option>Elija una opción</option>
+					    	<option>Argentino</option>
+					    	<option>Uruguayo</option>
+					    	<option>Boliviano</option>
+					    	<option>Paraguayo</option>
+					    	<option>Chileno</option>
+					    	<option>Brasilero</option>
+					    </select>
+				    </div>
+				    <div class="form-group col-md-6">
+				    	<label for="sexo-responsable">Sexo del responsable</label>
+				    	<select class="form-control" id="sexo-responsable">
+				    		<option>Elija una opción</option>
+					    	<option>Femenino</option>
+					    	<option>Masculino</option>
+					    </select>
+				  	</div>
+				</div>
+
+				<h5 class="mt-4">Datos de contacto del responsable</h5>
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="telefono-responsable">Teléfono del responsable</label>
+				    	<input type="text" class="form-control" id="telefono-responsable" placeholder="Sin espacios ni guiones. Ej: 43479092">
+				    </div>
+				    <div class="form-group col-md-6">
+				    	<label for="email-responsable">Email responsable</label>
+				    	<input type="email" class="form-control" id="email-responsable">
+				  	</div>
+				</div>
+
+				<div class="form-group mt-4">
+					<button type="submit" class="btn btn-danger">Reiniciar formulario</button>
+					<button type="submit" class="btn btn-primary">Confirmar</button>
+				</div>
+			</form>
+		</div>
+
+		<hr>
+
+		<div class="interfaz" id="consultar-alumno">
+			<h4>Consultar alumno</h4>
+			<p>En construcción</p>
+		</div>
+
+
+		<a href="#nav" id="volver-arriba">
+			Volver al nav
+		</a>
+	</div>
+</body>
+</html>
