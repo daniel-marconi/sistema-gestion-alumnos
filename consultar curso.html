@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="./estilos/main.css">
+	<title>Sistema de gestion de alumnos</title>
+</head>
+<body>
+	<div id="nav">
+		<a href="#cargar-curso" class="nav-item">Registrar curso</a>
+		<a href="#consultar-curso" class="nav-item">Consultar curso</a>
+	</div>
+
+	<div class="container">
+
+		<div class="interfaz" id="modificar-curso">
+			<h4>Consultar curso</h4>
+			<hr>
+
+			<form>
+				<h5 class="mt-4">Buscar curso</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	
+						  <div>
+						    <input type="search" id="busqueda" name="a"
+						     placeholder="Ingresar año" pattern="[1-6]">
+						     <input type="search" id="busqueda" name="d"
+						     placeholder="Ingresar división" pattern="[A-Ca-c]">
+						    <button>Buscar</button>
+						  </div>
+				    </div>
+				</div>			    
+			
+				
+				<h5 class="mt-4">Datos del curso ingresado</h5>
+				<table class="table table-striped">
+					<tr>
+						<td>Año</td>
+						<td>División</td>
+						<td>Modalidad</td>
+						<td>Turno</td>
+					</tr>
+
+					<tr>
+						<td>4</td>
+						<td>B</td>
+						<td>Ciencias Sociales</td>
+						<td>Mañana</td>
+					</tr>
+				</table>
+
+				<div class="form-group mt-4">
+					<button type="submit" class="btn btn-success">Modificar curso</button>
+					<button type="submit" class="btn btn-danger">Eliminar curso</button>
+				</div>
+		<hr>
+
+		<a href="#nav" id="volver-arriba">
+			Volver al nav
+		</a>
+	</div>
+</body>
+</html>

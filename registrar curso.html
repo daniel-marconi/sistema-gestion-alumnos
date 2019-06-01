@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="./estilos/main.css">
+	<title>Sistema de gestion de alumnos</title>
+</head>
+<body>
+	<div id="nav">
+		<a href="#cargar-curso" class="nav-item">Registrar curso</a>
+		<a href="#consultar-curso" class="nav-item">Consultar curso</a>
+	</div>
+
+	<div class="container">
+
+		<div class="interfaz" id="cargar-curso">
+			<h4>Registrar curso</h4>
+			<hr>
+
+			<form>
+				<h5 class="mt-4">Datos del curso</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="año">Año</label>
+				    	<select class="form-control" id="año">
+				    		<option>Elija un año</option>
+					    	<option>1°</option>
+					    	<option>2°</option>
+					    	<option>3°</option>
+					    	<option>4°</option>
+					    	<option>5°</option>
+					    	<option>6°</option>				    	
+					    </select>
+				    </div>
+				</div>
+
+					<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="division">División</label>
+				    	<select class="form-control" id="division">
+				    		<option>Elija una división</option>
+					    	<option>A</option>
+					    	<option>B</option>
+					    	<option>C</option>		    	
+					    </select>
+				    </div>
+				</div>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="modalidad">Modalidad</label>
+				    	<select class="form-control" id="modalidad">
+				    		<option>Elija una modalidad para el curso</option>
+					    	<option>Ciencias Sociales</option>
+					    	<option>Ciencias Naturales</option>
+					    	<option>Economía y administración</option>
+					    </select>
+				    </div>
+				</div>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="turno">Turno</label>
+				    	<select class="form-control" id="turnono">
+				    		<option>Elija un turno</option>
+					    	<option>Mañana</option>
+					    	<option>Tarde</option>
+					    </select>
+				    </div>
+				</div>
+
+
+				<div class="form-group mt-4">
+					<button type="submit" class="btn btn-danger">Reiniciar formulario</button>
+					<button type="submit" class="btn btn-primary">Confirmar</button>
+				</div>
+			</form>
+		</div>
+
+		<hr>
+
+		<div class="interfaz" id="consultar-curso">
+			<h4>Consultar curso</h4>
+			<p>En construcción</p>
+		</div>
+
+		<a href="#nav" id="volver-arriba">
+			Volver al nav
+		</a>
+	</div>
+</body>
+</html>

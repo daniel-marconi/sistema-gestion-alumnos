@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="./estilos/main.css">
+	<title>Sistema de gestion de alumnos</title>
+</head>
+<body>
+	<div id="nav">
+		<a href="#cargar-curso" class="nav-item">Registrar nota</a>
+		<a href="#consultar-curso" class="nav-item">Consultar nota</a>
+	</div>
+
+	<div class="container">
+
+		<div class="interfaz" id="consultar-nota">
+			<h4>Consultar nota</h4>
+			<hr>
+
+			<form>
+				<h5 class="mt-4">Buscar alumno</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	
+						  <div>
+						    <input type="search" id="busqueda" name="n"
+						     placeholder="Ingrese nombre" pattern="[A-z]">
+						     <input type="search" id="busqueda" name="a"
+						     placeholder="Ingrese apellido" pattern="[A-z]">
+						    <button>Buscar</button>
+						  </div>
+				    </div>
+				</div>		
+
+				<h5 class="mt-4">Buscar materia</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	
+						  <div>
+						    <input type="search" id="busqueda" name="m"
+						     placeholder="Ingrese materia" pattern="[A-z]">
+						    <button>Buscar</button>
+						  </div>
+				    </div>
+				</div>			    
+			
+
+				
+				<h5 class="mt-4">Nota del alumno según la materia ingresada</h5>
+				<table class="table table-striped">
+					<tr>
+						<td>Nombre</td>
+						<td>Apellido</td>
+						<td>Materia</td>
+						<td>Nota</td>
+					</tr>
+
+					<tr>
+						<td>Esteban</td>
+						<td>González</td>
+						<td>Matemática</td>
+						<td>8</td>
+					</tr>
+				</table>
+
+				<div class="form-group mt-4">
+					<button type="submit" class="btn btn-success">Modificar nota</button>
+					<button type="submit" class="btn btn-danger">Eliminar nota</button>
+				</div>
+		<hr>
+
+		<a href="#nav" id="volver-arriba">
+			Volver al nav
+		</a>
+	</div>
+</body>
+</html>
