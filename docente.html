@@ -8,18 +8,18 @@
 </head>
 <body>
 	<div id="nav">
-		<a href="#registrar-alumno" class="nav-item">Registrar alumno</a>
-		<a href="#consultar-alumno" class="nav-item">Consultar alumno</a>
-		<a href="#consultar-alumno-encontrado" class="nav-item">Alumno encontrado</a>
-		<a href="#consultar-alumno-no-encontrado" class="nav-item">Alumno no encontrado</a>
-		<a href="#modificar-alumno" class="nav-item">Modificar alumno</a>
-		<a href="#eliminar-alumno" class="nav-item">Eliminar alumno</a>
+		<a href="#registrar-docente" class="nav-item">Registrar docente</a>
+		<a href="#consultar-docente" class="nav-item">Consultar docente</a>
+		<a href="#consultar-docente-encontrado" class="nav-item">Docente encontrado</a>
+		<a href="#consultar-docente-no-encontrado" class="nav-item">Docente no encontrado</a>
+		<a href="#modificar-docente" class="nav-item">Modificar docente</a>
+		<a href="#eliminar-docente" class="nav-item">Eliminar docente</a>
 	</div>
 
 	<div class="container">
 
-		<div class="interfaz" id="registrar-alumno">
-			<h4>Registrar alumno</h4>
+		<div class="interfaz" id="registrar-docente">
+			<h4>Registrar docente</h4>
 			<hr>
 
 			<form>
@@ -130,90 +130,6 @@
 				  	</div>
 				</div>
 
-				<h5 class="mt-4">Selección de curso</h5>
-				<div class="form-group">
-				    <label for="curso">Curso</label>
-				    <select class="form-control" id="curso">
-			    		<option>Elija una opción</option>
-				    	<option>1° A</option>
-						<option>1° B</option>
-						<option>1° C</option>
-						<option>1° D</option>
-						<option>2° A</option>
-						<option>...</option>
-				    </select>
-				</div>
-
-				<h5 class="mt-4">Datos personales del responsable (padre, madre o tutor)</h5>
-
-				<div class="form-row">
-				    <div class="form-group col-md-6">
-				    	<label for="tipo-documento-responsable">Tipo de documento del responsable</label>
-				    	<select class="form-control" id="tipo-documento-responsable">
-				    		<option>Elija una opción</option>
-					    	<option>DNI</option>
-					    	<option>CI</option>
-					    	<option>LE</option>
-					    	<option>LC</option>
-					    	<option>Pasaporte</option>
-					    </select>
-				    </div>
-				    <div class="form-group col-md-6">
-				    	<label for="numero-documento-responsable">Número de documento del responsable</label>
-				    	<input type="number" min="1" class="form-control" id="numero-documento-responsable" placeholder="Sin puntos ni guiones. Ej: 12345678">
-				  	</div>
-				</div>
-
-				<div class="form-group">
-				    <label for="nombres-responsable">Nombres del responsable</label>
-				    <input type="text" class="form-control" id="nombres-responsable">
-				</div>
-
-				<div class="form-group">
-				    <label for="apellidos-responsable">Apellidos del responsable</label>
-				    <input type="text" class="form-control" id="apellidos-responsable">
-				</div>
-
-				<div class="form-group">
-				    <label for="fecha-nacimiento-responsable">Fecha de nacimiento del responsable</label>
-				    <input type="date" class="form-control" id="fecha-nacimiento-responsable">
-				</div>
-
-				<div class="form-row">
-				    <div class="form-group col-md-6">
-				    	<label for="nacionalidad-responsable">Nacionalidad del responsable</label>
-				    	<select class="form-control" id="nacionalidad-responsable">
-				    		<option>Elija una opción</option>
-					    	<option>Argentino</option>
-					    	<option>Uruguayo</option>
-					    	<option>Boliviano</option>
-					    	<option>Paraguayo</option>
-					    	<option>Chileno</option>
-					    	<option>Brasilero</option>
-					    </select>
-				    </div>
-				    <div class="form-group col-md-6">
-				    	<label for="sexo-responsable">Sexo del responsable</label>
-				    	<select class="form-control" id="sexo-responsable">
-				    		<option>Elija una opción</option>
-					    	<option>Femenino</option>
-					    	<option>Masculino</option>
-					    </select>
-				  	</div>
-				</div>
-
-				<h5 class="mt-4">Datos de contacto del responsable</h5>
-				<div class="form-row">
-				    <div class="form-group col-md-6">
-				    	<label for="telefono-responsable">Teléfono del responsable</label>
-				    	<input type="text" class="form-control" id="telefono-responsable" placeholder="Sin espacios ni guiones. Ej: 43479092">
-				    </div>
-				    <div class="form-group col-md-6">
-				    	<label for="email-responsable">Email responsable</label>
-				    	<input type="email" class="form-control" id="email-responsable">
-				  	</div>
-				</div>
-
 				<div class="form-group mt-4">
 					<button type="reset" class="btn btn-danger">Reiniciar formulario</button>
 					<button type="submit" class="btn btn-primary">Confirmar</button>
@@ -223,8 +139,8 @@
 
 		<hr>
 
-		<div class="interfaz" id="consultar-alumno">
-			<h4>Consultar alumno</h4>
+		<div class="interfaz" id="consultar-docente">
+			<h4>Consultar docente</h4>
 			<hr>
 
 			<form>
@@ -264,8 +180,8 @@
 
 
 
-		<div class="interfaz" id="consultar-alumno-encontrado">
-			<h4>Consultar alumno - Encontrado</h4>
+		<div class="interfaz" id="consultar-docente-encontrado">
+			<h4>Consultar docente - Encontrado</h4>
 			<hr>
 
 			<form>
@@ -278,29 +194,23 @@
 
 				    <div class="form-group col-md-6">
 				    	<label for="numero-documento">Número de documento</label>
-				    	<input type="number" min="1" class="form-control" id="numero-documento" value="42359912" disabled>
+				    	<input type="number" min="1" class="form-control" id="numero-documento" value="15364129" disabled>
 				  	</div>
 				</div>
 
 				<div class="form-group">
 				    <label for="nombres">Nombres</label>
-				    <input type="text" class="form-control" id="nombres" value="Carla Agustina" disabled>
+				    <input type="text" class="form-control" id="nombres" value="Juan Ramón" disabled>
 				</div>
 
 				<div class="form-group">
 				    <label for="apellidos">Apellidos</label>
-				    <input type="text" class="form-control" id="apellidos" value="Rodríguez" disabled>
+				    <input type="text" class="form-control" id="apellidos" value="Gutiérrez" disabled>
 				</div>
-
-				<div class="form-group">
-				    <label for="curso">Curso</label>
-				    <input type="text" class="form-control" id="curso" value="2° A" disabled>
-				</div>
-				
 				
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-primary">Modificar datos</button>
-					<button class="btn btn-danger">Eliminar alumno</button>
+					<button class="btn btn-danger">Eliminar docente</button>
 				</div>
 
 			</form>
@@ -317,14 +227,14 @@
 
 
 
-		<div class="interfaz" id="consultar-alumno-no-encontrado">
-			<h4>Consultar alumno - No encontrado</h4>
+		<div class="interfaz" id="consultar-docente-no-encontrado">
+			<h4>Consultar docente - No encontrado</h4>
 			<hr>
 
 			<form>
 				<div class="alert alert-danger" role="alert">
-					<h4 class="alert-heading">Alumno no encontrado</h4>
-					No se encontró ningún alumno con el tipo de documento DNI y número 42368972
+					<h4 class="alert-heading">Docente no encontrado</h4>
+					No se encontró ningún docente con el tipo de documento DNI y número 32589451
 				</div>
 				
 				<div class="form-group mt-4">
@@ -341,8 +251,11 @@
 
 
 
-		<div class="interfaz" id="modificar-alumno">
-			<h4>Modificar alumno</h4>
+
+
+
+		<div class="interfaz" id="modificar-docente">
+			<h4>Modificar docente</h4>
 			<hr>
 
 			<form>
@@ -362,23 +275,23 @@
 				    </div>
 				    <div class="form-group col-md-6">
 				    	<label for="numero-documento">Número de documento</label>
-				    	<input type="number" min="1" class="form-control" id="numero-documento" placeholder="Sin puntos ni guiones. Ej: 12345678" value="42359912">
+				    	<input type="number" min="1" class="form-control" id="numero-documento" placeholder="Sin puntos ni guiones. Ej: 12345678" value="15364129">
 				  	</div>
 				</div>
 
 				<div class="form-group">
 				    <label for="nombres">Nombres</label>
-				    <input type="text" class="form-control" id="nombres" value="Carla Agustina">
+				    <input type="text" class="form-control" id="nombres" value="Juan Ramón">
 				</div>
 
 				<div class="form-group">
 				    <label for="apellidos">Apellidos</label>
-				    <input type="text" class="form-control" id="apellidos" value="Rodríguez">
+				    <input type="text" class="form-control" id="apellidos" value="Gutiérrez">
 				</div>
 
 				<div class="form-group">
 				    <label for="fecha-nacimiento">Fecha de nacimiento</label>
-				    <input type="date" class="form-control" id="fecha-nacimiento" value="2006-05-10">
+				    <input type="date" class="form-control" id="fecha-nacimiento" value="1965-11-11">
 				</div>
 
 				<div class="form-row">
@@ -397,9 +310,9 @@
 				    <div class="form-group col-md-6">
 				    	<label for="sexo">Sexo</label>
 				    	<select class="form-control" id="sexo">
-				    		<option>Elija una opción</option>
-					    	<option selected>Femenino</option>
-					    	<option>Masculino</option>
+				    		<option selected>Elija una opción</option>
+					    	<option>Femenino</option>
+					    	<option selected>Masculino</option>
 					    </select>
 				  	</div>
 				</div>
@@ -408,11 +321,11 @@
 				<div class="form-row">
 				    <div class="form-group col-md-6">
 				    	<label for="telefono">Teléfono</label>
-				    	<input type="text" class="form-control" id="telefono" placeholder="Sin espacios ni guiones. Ej: 43479092" value="43922658">
+				    	<input type="text" class="form-control" id="telefono" placeholder="Sin espacios ni guiones. Ej: 43479092" value="1526583645">
 				    </div>
 				    <div class="form-group col-md-6">
 				    	<label for="email">Email</label>
-				    	<input type="email" class="form-control" id="email" value="carlarodriguez2006@gmail.com">
+				    	<input type="email" class="form-control" id="email" value="profjrgutierrez@gmail.com">
 				  	</div>
 				</div>
 
@@ -420,11 +333,11 @@
 				<div class="form-row">
 				    <div class="form-group col-md-8">
 				    	<label for="calle-nombre">Calle</label>
-				    	<input type="text" class="form-control" id="calle-nombre" value="Garay">
+				    	<input type="text" class="form-control" id="calle-nombre" value="Av de Mayo">
 				    </div>
 				    <div class="form-group col-md-4">
 				    	<label for="calle-numero">Número</label>
-				    	<input type="number" min="1" class="form-control" id="calle-numero" placeholder="Sin puntos. Ej: 1289" value="354">
+				    	<input type="number" min="1" class="form-control" id="calle-numero" placeholder="Sin puntos. Ej: 1289" value="795">
 				  	</div>
 				</div>
 
@@ -451,90 +364,6 @@
 				  	</div>
 				</div>
 
-				<h5 class="mt-4">Selección de curso</h5>
-				<div class="form-group">
-				    <label for="curso">Curso</label>
-				    <select class="form-control" id="curso">
-			    		<option>Elija una opción</option>
-				    	<option>1° A</option>
-						<option>1° B</option>
-						<option>1° C</option>
-						<option>1° D</option>
-						<option selected>2° A</option>
-						<option>...</option>
-				    </select>
-				</div>
-
-				<h5 class="mt-4">Datos personales del responsable (padre, madre o tutor)</h5>
-
-				<div class="form-row">
-				    <div class="form-group col-md-6">
-				    	<label for="tipo-documento-responsable">Tipo de documento del responsable</label>
-				    	<select class="form-control" id="tipo-documento-responsable">
-				    		<option>Elija una opción</option>
-					    	<option selected>DNI</option>
-					    	<option>CI</option>
-					    	<option>LE</option>
-					    	<option>LC</option>
-					    	<option>Pasaporte</option>
-					    </select>
-				    </div>
-				    <div class="form-group col-md-6">
-				    	<label for="numero-documento-responsable">Número de documento del responsable</label>
-				    	<input type="number" min="1" class="form-control" id="numero-documento-responsable" placeholder="Sin puntos ni guiones. Ej: 12345678" value="22652018">
-				  	</div>
-				</div>
-
-				<div class="form-group">
-				    <label for="nombres-responsable">Nombres del responsable</label>
-				    <input type="text" class="form-control" id="nombres-responsable" value="Marcelo">
-				</div>
-
-				<div class="form-group">
-				    <label for="apellidos-responsable">Apellidos del responsable</label>
-				    <input type="text" class="form-control" id="apellidos-responsable" value="Rodríguez">
-				</div>
-
-				<div class="form-group">
-				    <label for="fecha-nacimiento-responsable">Fecha de nacimiento del responsable</label>
-				    <input type="date" class="form-control" id="fecha-nacimiento-responsable" value="1972-12-09">
-				</div>
-
-				<div class="form-row">
-				    <div class="form-group col-md-6">
-				    	<label for="nacionalidad-responsable">Nacionalidad del responsable</label>
-				    	<select class="form-control" id="nacionalidad-responsable">
-				    		<option>Elija una opción</option>
-					    	<option selected>Argentino</option>
-					    	<option>Uruguayo</option>
-					    	<option>Boliviano</option>
-					    	<option>Paraguayo</option>
-					    	<option>Chileno</option>
-					    	<option>Brasilero</option>
-					    </select>
-				    </div>
-				    <div class="form-group col-md-6">
-				    	<label for="sexo-responsable">Sexo del responsable</label>
-				    	<select class="form-control" id="sexo-responsable">
-				    		<option>Elija una opción</option>
-					    	<option>Femenino</option>
-					    	<option selected>Masculino</option>
-					    </select>
-				  	</div>
-				</div>
-
-				<h5 class="mt-4">Datos de contacto del responsable</h5>
-				<div class="form-row">
-				    <div class="form-group col-md-6">
-				    	<label for="telefono-responsable">Teléfono del responsable</label>
-				    	<input type="text" class="form-control" id="telefono-responsable" placeholder="Sin espacios ni guiones. Ej: 43479092" value="1535987265">
-				    </div>
-				    <div class="form-group col-md-6">
-				    	<label for="email-responsable">Email responsable</label>
-				    	<input type="email" class="form-control" id="email-responsable" value="marcelo_rodriguez_1972@hotmail.com">
-				  	</div>
-				</div>
-
 				<div class="form-group mt-4">
 					<button class="btn btn-danger">Cancelar</button>
 					<button type="submit" class="btn btn-primary">Actualizar</button>
@@ -542,25 +371,26 @@
 			</form>
 		</div>
 
-
 		<hr>
 
 
 
 
-		<div class="interfaz" id="eliminar-alumno">
-			<h4>Eliminar alumno</h4>
+
+
+		<div class="interfaz" id="eliminar-docente">
+			<h4>Eliminar docente</h4>
 			<hr>
 
 			<form>
 				<div class="alert alert-danger" role="alert">
 					<h4 class="alert-heading">Atención</h4>
-					¿Está seguro que desea eliminar del sistema a la alumna <span class="font-weight-bold">Rodríguez Carla Agustina</span>, <span class="font-weight-bold">DNI 42359912</span> del curso <span class="font-weight-bold">2° A</span>? Si la respuesta es sí presione Eliminar alumno, de lo contrario presione Cancelar.
+					¿Está seguro que desea eliminar del sistema al docente <span class="font-weight-bold">Gutiérrez Juan Ramón</span>, <span class="font-weight-bold">DNI 15364129</span>? Si la respuesta es sí presione Eliminar docente, de lo contrario presione Cancelar.
 				</div>
 				
 				<div class="form-group mt-4">
 					<button class="btn btn-primary">Cancelar</button>
-					<button type="submit" class="btn btn-danger">Eliminar alumno</button>
+					<button type="submit" class="btn btn-danger">Eliminar docente</button>
 				</div>
 
 			</form>

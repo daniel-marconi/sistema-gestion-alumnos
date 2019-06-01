@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="./estilos/main.css">
+	<title>Sistema de gestion de alumnos</title>
+</head>
+<body>
+	<div id="nav">
+		<a href="#registrar-asignatura" class="nav-item">Registrar asignatura</a>
+		<a href="#consultar-asignatura" class="nav-item">Consultar asignatura</a>
+		<a href="#modificar-asignatura" class="nav-item">Modificar asignatura</a>
+		<a href="#eliminar-asignatura" class="nav-item">Eliminar asignatura</a>
+	</div>
+
+	<div class="container">
+
+		<div class="interfaz" id="registrar-asignatura">
+			<h4>Registrar asignatura</h4>
+			<hr>
+
+			<form>
+				<h5 class="mt-4">Datos de la asignatura</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="nombre">Nombre</label>
+				    	<input type="text" class="form-control" id="nombre">
+				  	</div>
+
+				    <div class="form-group col-md-6">
+				    	<label for="horas">Cantidad de horas semanales</label>
+				    	<input type="number" min="1" max="10" class="form-control" id="horas">
+				  	</div>
+				</div>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="curso">Curso</label>
+					    <select class="form-control" id="curso">
+				    		<option>Elija una opción</option>
+					    	<option>1° A</option>
+							<option>1° B</option>
+							<option>1° C</option>
+							<option>1° D</option>
+							<option>2° A</option>
+							<option>...</option>
+					    </select>
+				    </div>
+				    <div class="form-group col-md-6">
+				    	<label for="docente">Docente</label>
+				    	<select class="form-control" id="docente">
+				    		<option>Elija una opción</option>
+					    	<option>Gutiérrez, Juan Ramón</option>
+					    	<option>Sánchez, Graciela</option>
+					    	<option>Zapata, Mónica</option>
+					    	<option>...</option>
+					    </select>
+				  	</div>
+				</div>
+
+				<div class="form-group mt-4">
+					<button type="reset" class="btn btn-danger">Reiniciar formulario</button>
+					<button type="submit" class="btn btn-primary">Confirmar</button>
+				</div>
+			</form>
+		</div>
+
+		<hr>
+
+
+
+
+
+		<div class="interfaz" id="consultar-asignatura">
+			<h4>Consultar asignatura</h4>
+			<hr>
+
+			<form>
+				<h5 class="mt-4">Seleccione asignatura</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="curso">Curso</label>
+					    <select class="form-control" id="curso">
+				    		<option>Elija una opción</option>
+					    	<option>1° A</option>
+							<option>1° B</option>
+							<option>1° C</option>
+							<option selected>1° D</option>
+							<option>2° A</option>
+							<option>...</option>
+					    </select>
+				    </div>
+				    <div class="form-group col-md-6">
+				    	<label for="asignatura">Asignatura</label>
+				    	<select class="form-control" id="asignatura">
+				    		<option>Elija una opción</option>
+					    	<option>Matemática</option>
+					    	<option>Lengua y literatura</option>
+					    	<option selected>Biología</option>
+					    	<option>...</option>
+					    </select>
+				  	</div>
+				</div>
+
+				<h5 class="mt-4">Asignatura encontrada</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="nombre">Docente</label>
+				    	<input type="text" class="form-control" id="nombre" value="Zapata, Mónica" disabled>
+				  	</div>
+
+				    <div class="form-group col-md-6">
+				    	<label for="horas">Cantidad de horas semanales</label>
+				    	<input type="number" min="1" max="10" class="form-control" id="horas" value="3" disabled>
+				  	</div>
+				</div>
+
+				<div class="form-group mt-4">
+					<button class="btn btn-danger">Cancelar</button>
+					<button class="btn btn-primary">Modificar</button>
+					<button class="btn btn-primary">Eliminar</button>
+				</div>
+
+			</form>
+
+		</div>
+
+
+		<hr>
+
+
+
+
+
+
+		<div class="interfaz" id="modificar-asignatura">
+			<h4>Modificar asignatura</h4>
+			<hr>
+
+			<form>
+				<h5 class="mt-4">Datos de la asignatura</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="nombre">Nombre</label>
+				    	<input type="text" class="form-control" id="nombre" value="Biología">
+				  	</div>
+
+				    <div class="form-group col-md-6">
+				    	<label for="horas">Cantidad de horas semanales</label>
+				    	<input type="number" min="1" max="10" class="form-control" id="horas" value="3">
+				  	</div>
+				</div>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="curso">Curso</label>
+					    <select class="form-control" id="curso">
+				    		<option>Elija una opción</option>
+					    	<option>1° A</option>
+							<option>1° B</option>
+							<option>1° C</option>
+							<option selected>1° D</option>
+							<option>2° A</option>
+							<option>...</option>
+					    </select>
+				    </div>
+				    <div class="form-group col-md-6">
+				    	<label for="docente">Docente</label>
+				    	<select class="form-control" id="docente">
+				    		<option>Elija una opción</option>
+					    	<option>Gutiérrez, Juan Ramón</option>
+					    	<option>Sánchez, Graciela</option>
+					    	<option selected>Zapata, Mónica</option>
+					    	<option>...</option>
+					    </select>
+				  	</div>
+				</div>
+
+				<div class="form-group mt-4">
+					<button class="btn btn-danger">Cancelar</button>
+					<button class="btn btn-primary">Modificar asignatura</button>
+				</div>
+			</form>
+		</div>
+
+		<hr>
+
+
+
+
+
+
+		<div class="interfaz" id="eliminar-asignatura">
+			<h4>Eliminar asignatura</h4>
+			<hr>
+
+			<form>
+				<div class="alert alert-danger" role="alert">
+					<h4 class="alert-heading">Atención</h4>
+					¿Está seguro que desea eliminar del sistema la asignatura <span class="font-weight-bold">Biología</span>, del curso <span class="font-weight-bold">1° D</span>, dada por la docente <span class="font-weight-bold">Zapata Mónica</span>? Si la respuesta es sí presione Eliminar asignatura, de lo contrario presione Cancelar.
+				</div>
+				
+				<div class="form-group mt-4">
+					<button class="btn btn-primary">Cancelar</button>
+					<button type="submit" class="btn btn-danger">Eliminar asignatura</button>
+				</div>
+
+			</form>
+
+		</div>
+
+
+
+		<a href="#nav" id="volver-arriba">
+			Volver al nav
+		</a>
+	</div>
+</body>
+</html>
