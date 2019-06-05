@@ -17,23 +17,28 @@
 		<div class="interfaz" id="modificar-curso">
 			<h4>Modificar curso</h4>
 			<hr>
+			<h5 class="mt-4">Datos del curso que desea modificar</h5>
+				<table class="table table-striped">
+					<tr>
+						<td>Año</td>
+						<td>División</td>
+						<td>Modalidad</td>
+						<td>Turno</td>
+						<td>Cantidad de alumnos</td>
 
-			<form>
-				<h5 class="mt-4">Buscar curso</h5>
+					</tr>
 
-				<div class="form-row">
-				    <div class="form-group col-md-6">
-				    	<label for="año">Año</label>
-						  <div>
-						    <input type="search" id="busqueda" name="q"
-						     placeholder="Ingresar año" pattern="[1-6]">
-						     <input type="search" id="busqueda" name="q"
-						     placeholder="Ingresar división" pattern="[A-a] [B-b] [C-c]">
-						    <button>Buscar</button>
-						  </div>
-				    </div>
-				</div>			    
-			
+					<tr>
+						<td>4</td>
+						<td>B</td>
+						<td>Ciencias Sociales</td>
+						<td>Mañana</td>
+						<td>29</td>
+
+					</tr>
+				</table>
+
+			<form>				    
 				<div class="form-row">
 				    <div class="form-group col-md-6">
 				    	<label for="modalidad">Modalidad</label>
@@ -46,7 +51,7 @@
 				    </div>
 				</div>
 
-					<div class="form-row">
+				<div class="form-row">
 				    <div class="form-group col-md-6">
 				    	<label for="turno">Turno</label>
 				    	<select class="form-control" id="turnono">
@@ -57,24 +62,23 @@
 				    </div>
 				</div>
 
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="cantidad">Cantidad de alumnos</label>
+				    	<input type="number" min="1" class="form-control" id="numero-documento" placeholder="Ingrese una nueva cantidad de alumnos">
+				  	</div>
+				</div>
+
 
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-danger">Reiniciar formulario</button>
 					<button type="submit" class="btn btn-primary">Confirmar</button>
+					<button type="submit" class="btn btn-secondary">Cancelar</button>
 				</div>
 			</form>
 		</div>
 
-		<hr>
-
-		<div class="interfaz" id="consultar-curso">
-			<h4>Consultar curso</h4>
-			<p>En construcción</p>
-		</div>
-
-		<a href="#nav" id="volver-arriba">
-			Volver al nav
-		</a>
+		
 	</div>
 </body>
 </html>
