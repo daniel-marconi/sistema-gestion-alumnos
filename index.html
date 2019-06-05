@@ -553,10 +553,40 @@
 			<hr>
 
 			<form>
+
 				<div class="alert alert-danger" role="alert">
 					<h4 class="alert-heading">Atención</h4>
 					¿Está seguro que desea eliminar del sistema a la alumna <span class="font-weight-bold">Rodríguez Carla Agustina</span>, <span class="font-weight-bold">DNI 42359912</span> del curso <span class="font-weight-bold">2° A</span>? Si la respuesta es sí presione Eliminar alumno, de lo contrario presione Cancelar.
 				</div>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="numero-documento">Tipo de documento</label>
+				    	<input type="text" class="form-control" id="tipo-documento" value="DNI" disabled>
+				  	</div>
+
+				    <div class="form-group col-md-6">
+				    	<label for="numero-documento">Número de documento</label>
+				    	<input type="number" min="1" class="form-control" id="numero-documento" value="42359912" disabled>
+				  	</div>
+				</div>
+
+				<div class="form-group">
+				    <label for="nombres">Nombres</label>
+				    <input type="text" class="form-control" id="nombres" value="Carla Agustina" disabled>
+				</div>
+
+				<div class="form-group">
+				    <label for="apellidos">Apellidos</label>
+				    <input type="text" class="form-control" id="apellidos" value="Rodríguez" disabled>
+				</div>
+
+				<div class="form-group">
+				    <label for="curso">Curso</label>
+				    <input type="text" class="form-control" id="curso" value="2° A" disabled>
+				</div>
+				
+				
 				
 				<div class="form-group mt-4">
 					<button class="btn btn-primary">Cancelar</button>
