@@ -8,9 +8,5 @@
 
 	$conectorBD = new conectorBD;
 
-	//falta validar si la nota existe
-
 	$conectorBD->registrarNota($alumno, $materia, $trimestre, $nota);
-
-	header("Location: ../interfaces/consultar-nota.php"); 
 ?>
