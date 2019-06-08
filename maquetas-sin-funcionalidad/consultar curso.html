@@ -3,18 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="./estilos/main.css">
+	<link rel="stylesheet" href="../estilos/main.css">
 	<title>Sistema de gestion de alumnos</title>
 </head>
 <body>
-	
+	<div id="nav">
+		<a href="#cargar-curso" class="nav-item">Registrar curso</a>
+		<a href="#consultar-curso" class="nav-item">Consultar curso</a>
+	</div>
 
 	<div class="container">
 
-		<div class="alert alert-danger" role="alert">
-					<h4 class="alert-heading">Atención</h4>
-					¿Está seguro que desea eliminar del sistema el curso <span class="font-weight-bold">4°B</span>? Si la respuesta es sí presione Eliminar curso, de lo contrario presione Cancelar.
-				</div>
+		<div class="interfaz" id="modificar-curso">
+			<h4>Consultar curso</h4>
+			<hr>
 
 			<form>
 				<h5 class="mt-4">Buscar curso</h5>
@@ -57,7 +59,7 @@
 				<div class="form-group mt-4">
 					<button type="submit" class="btn btn-success">Modificar curso</button>
 					<button type="submit" class="btn btn-danger">Eliminar curso</button>
-					<button type="submit" class="btn btn-secondary">Cancelar</button>				
+					<button type="submit" class="btn btn-secondary">Cancelar</button>
 				</div>
 
 				
