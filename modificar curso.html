@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="./estilos/main.css">
+	<title>Sistema de gestion de alumnos</title>
+</head>
+<body>
+	<div id="nav">
+		<a href="#cargar-curso" class="nav-item">Registrar curso</a>
+		<a href="#consultar-curso" class="nav-item">Consultar curso</a>
+	</div>
+
+	<div class="container">
+
+		<div class="interfaz" id="modificar-curso">
+			<h4>Modificar curso</h4>
+			<hr>
+			<h5 class="mt-4">Datos del curso que desea modificar</h5>
+				<table class="table table-striped">
+					<tr>
+						<td>Año</td>
+						<td>División</td>
+						<td>Modalidad</td>
+						<td>Turno</td>
+						<td>Cantidad de alumnos</td>
+
+					</tr>
+
+					<tr>
+						<td>4</td>
+						<td>B</td>
+						<td>Ciencias Sociales</td>
+						<td>Mañana</td>
+						<td>29</td>
+
+					</tr>
+				</table>
+
+			<form>				    
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="modalidad">Modalidad</label>
+				    	<select class="form-control" id="modalidad">
+				    		<option>Elija una nueva modalidad para el curso</option>
+					    	<option>Ciencias Sociales</option>
+					    	<option>Ciencias Naturales</option>
+					    	<option>Economía y administración</option>
+					    </select>
+				    </div>
+				</div>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="turno">Turno</label>
+				    	<select class="form-control" id="turnono">
+				    		<option>Elija un nuevo turno</option>
+					    	<option>Mañana</option>
+					    	<option>Tarde</option>
+					    </select>
+				    </div>
+				</div>
+
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				    	<label for="cantidad">Cantidad de alumnos</label>
+				    	<input type="number" min="1" class="form-control" id="numero-documento" placeholder="Ingrese una nueva cantidad de alumnos">
+				  	</div>
+				</div>
+
+
+				<div class="form-group mt-4">
+					<button type="submit" class="btn btn-danger">Reiniciar formulario</button>
+					<button type="submit" class="btn btn-primary">Confirmar</button>
+					<button type="submit" class="btn btn-secondary">Cancelar</button>
+				</div>
+			</form>
+		</div>
+
+		
+	</div>
+</body>
+</html>

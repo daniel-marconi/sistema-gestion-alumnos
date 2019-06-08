@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="./estilos/main.css">
+	<title>Sistema de gestion de alumnos</title>
+</head>
+<body>
+	<div id="nav">
+		<a href="#cargar-curso" class="nav-item">Registrar nota</a>
+		<a href="#consultar-curso" class="nav-item">Consultar nota</a>
+	</div>
+
+	<div class="container">
+
+		<div class="interfaz" id="consultar-nota">
+			<h4>Consultar nota</h4>
+			<hr>
+
+			
+			<form>
+				<h5 class="mt-4">Datos personales</h5>
+
+				<div class="form-row">
+				    <div class="form-group col-md-2">
+				    	<label for="tipo-documento">Tipo de documento</label>
+				    	<select class="form-control" id="tipo-documento">
+				    		<option>Elija una opción</option>
+					    	<option selected>DNI</option>
+					    	<option>CI</option>
+					    	<option>LE</option>
+					    	<option>LC</option>
+					    	<option>Pasaporte</option>
+					    </select>
+				    </div>
+				    <div class="form-group col-md-3">
+				    	<label for="numero-documento">Número de documento</label>
+				    	<input type="number" min="1" class="form-control" id="numero-documento" placeholder="Sin puntos ni guiones. Ej: 12345678" value="42359912">
+				  	</div>
+				</div>
+				
+				<h5 class="mt-4">Nota del alumno según la materia ingresada</h5>
+				<table class="table table-striped">
+					<tr>
+						<td>Nombre</td>
+						<td>Apellido</td>
+						<td>Materia</td>
+						<td>Nota 1° trimestre</td>
+						<td>Nota 2° trimestre</td>
+						<td>Nota 3° trimestre</td>
+					</tr>
+
+					<tr>
+						<td>Esteban</td>
+						<td>González</td>
+						<td>Matemática</td>
+						<td>8</td>
+						<td>8</td>
+						<td>9</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td>Literatura</td>
+						<td>8</td>
+						<td>10</td>
+						<td>7</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td>Inglés</td>
+						<td>10</td>
+						<td>10</td>
+						<td>9</td>
+					</tr>
+				</table>
+
+				<div class="form-group mt-4">
+					<button type="submit" class="btn btn-success">Modificar nota</button>
+					<button type="submit" class="btn btn-danger">Eliminar nota</button>
+					<button type="submit" class="btn btn-secondary">Cancelar</button>
+				</div>
+		<hr>
+
+		
+	</div>
+</body>
+</html>
