@@ -20,6 +20,11 @@
 	margin: 20px 0;
 }
 
+.interfaz + hr{
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+
 #volver-arriba{
 	position: fixed;
 	background-color: #000C;
