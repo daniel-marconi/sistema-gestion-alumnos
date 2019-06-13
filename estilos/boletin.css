@@ -1,0 +1,37 @@
+#nav{
+	background-color: black;
+	padding: 20px;
+}
+
+.nav-item{
+	color: #FFF6;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0 10px;
+}
+
+.nav-item:hover{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.interfaz{
+	margin: 20px 0;
+}
+
+#volver-arriba{
+	position: fixed;
+	background-color: #000C;
+	color: #FFFD;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 4px;
+	bottom: 20px;
+	right: 5%;
+}
+
+#volver-arriba:hover{
+	background-color: black;
+	color: white;
+}
