@@ -1,13 +1,14 @@
 #nav{
 	background-color: black;
-	padding: 20px;
+	padding: 10px;
 }
 
 .nav-item{
 	color: #FFF6;
 	text-decoration: none;
 	font-weight: bold;
-	padding: 0 10px;
+	padding: 5px 10px;
+	display: inline-block;
 }
 
 .nav-item:hover{
