@@ -1,20 +1,27 @@
+.container{
+	margin-top: 50px;
+}
+
 #nav{
-	background-color: black;
+	background-color: #28A745;
 	padding: 10px;
 }
 
 .nav-item{
-	color: #FFF6;
+	border-radius: 4px;
+	color: white;
 	text-decoration: none;
 	font-weight: bold;
 	padding: 5px 10px;
 	display: inline-block;
+	transition: background-color .25s;
 }
 
 .nav-item:hover{
-	color: white;
 	text-decoration: none;
 	cursor: pointer;
+	background-color: #2BBA46;
+	color: white;
 }
 
 .interfaz{

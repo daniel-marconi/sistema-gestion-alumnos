@@ -9,6 +9,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" href="./estilos/main.css">
 	<title>Sistema de gestion de alumnos</title>
 </head>
@@ -16,15 +17,21 @@
 	
 	<?php
 		require_once('./util/nav.php');
-
-		if (file_exists("./views/$view.php")){
-			require_once("./views/$view.php");	
-		}
-		else {
-			echo 'File not found =(';
-		}
-
 	?>
+
+	<div class="container">
+
+		<?php
+			if (file_exists("./views/$view.php")){
+				require_once("./views/$view.php");	
+			}
+			else {
+				require_once("./util/error.php");
+			}
+
+		?>
+
+	</div>
 
 </body>
 </html>
