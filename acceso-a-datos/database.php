@@ -15,6 +15,7 @@
 		private $notasPorAlumnoSQL = "SELECT * FROM notas WHERE alumno_id = :alumnoId ORDER BY materia_id, trimestre";
 		private $consultarNotaPorIdSQL = "SELECT * FROM notas WHERE id = :notaId";
 		private $actualizarNotaSQL = "UPDATE notas SET valor=:valorNota WHERE id=:notaId";
+		private $eliminarNotaSQL = "DELETE FROM notas WHERE id=:notaId";
 
 		private function nuevaConexion(){
 			$nuevaConexion = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
@@ -121,5 +122,12 @@
 			return $materia->fetch_assoc();
 		}
 		
+
+		function eliminarNota($notaId){
+			$conn = $this->nuevaConexion();
+			$sql = str_replace(":notaId", $notaId, $this->eliminarNotaSQL);
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+		}
 	}
 ?>
