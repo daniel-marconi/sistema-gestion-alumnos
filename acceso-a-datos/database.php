@@ -7,11 +7,14 @@
 
 		private $todosLosCursosSQL = "SELECT * FROM cursos";
 		private $todasLasMateriasSQL = "SELECT * FROM materias";
+		private $consultarMateriaPorIdSQL = "SELECT * FROM materias WHERE id=:materiaId";
 		private $alumnosPorCursoSQL = "SELECT * FROM alumnos WHERE curso_id=:cursoId";
 		private $consultarAlumnoSQL = "SELECT * FROM alumnos WHERE id = :alumnoId LIMIT 1";
 		private $registrarNotaSQL= "INSERT INTO notas (alumno_id, materia_id, trimestre, valor) VALUES (:alumnoId, :materiaId, :trimestre, :valor)";
 		private $consultarNotaSQL= "SELECT * FROM notas WHERE alumno_id=:alumnoId AND materia_id=:materiaId AND trimestre=:trimestre";
 		private $notasPorAlumnoSQL = "SELECT * FROM notas WHERE alumno_id = :alumnoId ORDER BY materia_id, trimestre";
+		private $consultarNotaPorIdSQL = "SELECT * FROM notas WHERE id = :notaId";
+		private $actualizarNotaSQL = "UPDATE notas SET valor=:valorNota WHERE id=:notaId";
 
 		private function nuevaConexion(){
 			$nuevaConexion = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
@@ -80,6 +83,15 @@
 			return $nota;
 		}
 
+		function consultarNotaPorId($notaId){
+			$conn = $this->nuevaConexion();
+			$sql = str_replace(":notaId", $notaId, $this->consultarNotaPorIdSQL);
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+			$nota = $stmt->get_result();
+			return $nota->fetch_assoc();
+		}
+
 		function notasPorAlumno($alumnoId){
 			
 			$conn = $this->nuevaConexion();
@@ -89,7 +101,25 @@
 			$notas = $stmt->get_result();
 			return $notas;
 		}
+
+
+		function actualizarNota($notaId, $valorNota){
+			$conn = $this->nuevaConexion();
+			$sql = str_replace(":valorNota", $valorNota, $this->actualizarNotaSQL);
+			$sql = str_replace(":notaId", $notaId, $sql);
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+		}
 		
+
+		function consultarMateriaPorId($materiaId){
+			$conn = $this->nuevaConexion();
+			$sql = str_replace(":materiaId", $materiaId, $this->consultarMateriaPorIdSQL);
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+			$materia = $stmt->get_result();
+			return $materia->fetch_assoc();
+		}
 		
 	}
 ?>
