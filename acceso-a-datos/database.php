@@ -6,6 +6,7 @@
 		private $pass = "";
 
 		private $todosLosCursosSQL = "SELECT * FROM cursos";
+		private $consultarCursoSQL = "SELECT * FROM cursos WHERE id=:cursoId";
 		private $todasLasMateriasSQL = "SELECT * FROM materias";
 		private $consultarMateriaPorIdSQL = "SELECT * FROM materias WHERE id=:materiaId";
 		private $alumnosPorCursoSQL = "SELECT * FROM alumnos WHERE curso_id=:cursoId";
@@ -16,6 +17,8 @@
 		private $consultarNotaPorIdSQL = "SELECT * FROM notas WHERE id = :notaId";
 		private $actualizarNotaSQL = "UPDATE notas SET valor=:valorNota WHERE id=:notaId";
 		private $eliminarNotaSQL = "DELETE FROM notas WHERE id=:notaId";
+
+		private $eliminarTodasLasNotasSQL = "DELETE FROM notas";
 
 		private function nuevaConexion(){
 			$nuevaConexion = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
@@ -29,6 +32,15 @@
 			$stmt->execute();
 			$cursos = $stmt->get_result();
 			return $cursos;
+		}
+
+		function consultarCurso($cursoId){
+			$conn = $this->nuevaConexion();
+			$sql = str_replace(":cursoId", $cursoId, $this->consultarCursoSQL);
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+			$curso = $stmt->get_result();
+			return $curso->fetch_assoc();
 		}
 
 		function todasLasMaterias(){
@@ -127,6 +139,12 @@
 			$conn = $this->nuevaConexion();
 			$sql = str_replace(":notaId", $notaId, $this->eliminarNotaSQL);
 			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+		}
+
+		function eliminarTodasLasNotas(){
+			$conn = $this->nuevaConexion();
+			$stmt = $conn->prepare($this->eliminarTodasLasNotasSQL);
 			$stmt->execute();
 		}
 	}
