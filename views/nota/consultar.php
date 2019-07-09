@@ -6,11 +6,11 @@
 
 ?>
 
-<div class="interfaz" id="registrar-nota">
-	<h4>Registrar nota</h4>
+<div class="interfaz" id="consultar-nota">
+	<h4>Consultar nota</h4>
 	<hr>
 
-	<form action="./pre-view.php?view=nota/registrar-2" method="POST">
+	<form action="./pre-view.php?view=nota/consultar-2" method="POST">
 		<h5 class="mt-2">Buscar curso</h5>
 
 		<div class="form-row">

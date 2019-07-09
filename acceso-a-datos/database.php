@@ -8,8 +8,10 @@
 		private $todosLosCursosSQL = "SELECT * FROM cursos";
 		private $todasLasMateriasSQL = "SELECT * FROM materias";
 		private $alumnosPorCursoSQL = "SELECT * FROM alumnos WHERE curso_id=:cursoId";
+		private $consultarAlumnoSQL = "SELECT * FROM alumnos WHERE id = :alumnoId LIMIT 1";
 		private $registrarNotaSQL= "INSERT INTO notas (alumno_id, materia_id, trimestre, valor) VALUES (:alumnoId, :materiaId, :trimestre, :valor)";
 		private $consultarNotaSQL= "SELECT * FROM notas WHERE alumno_id=:alumnoId AND materia_id=:materiaId AND trimestre=:trimestre";
+		private $notasPorAlumnoSQL = "SELECT * FROM notas WHERE alumno_id = :alumnoId ORDER BY materia_id, trimestre";
 
 		private function nuevaConexion(){
 			$nuevaConexion = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
@@ -42,6 +44,15 @@
 			return $alumnosPorCurso;
 		}
 
+		function consultarAlumno($alumnoId){
+			$conn = $this->nuevaConexion();
+			$sql = str_replace(":alumnoId", $alumnoId, $this->consultarAlumnoSQL);
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+			$alumno = $stmt->get_result();
+			return $alumno->fetch_assoc();
+		}
+
 		function registrarNota($alumnoId, $materiaId, $trimestre, $valor){
 			$affectedRows = 0;
 			if(!$this->consultarNota($alumnoId, $materiaId, $trimestre)->num_rows){
@@ -67,6 +78,16 @@
 			$stmt->execute();
 			$nota = $stmt->get_result();
 			return $nota;
+		}
+
+		function notasPorAlumno($alumnoId){
+			
+			$conn = $this->nuevaConexion();
+			$sql = str_replace(":alumnoId", $alumnoId, $this->notasPorAlumnoSQL);
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+			$notas = $stmt->get_result();
+			return $notas;
 		}
 		
 		

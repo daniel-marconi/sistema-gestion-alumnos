@@ -9,6 +9,7 @@
 	$materiaId = $_POST['materia-id'] ? $_POST['materia-id'] : '';
 	$trimestre = $_POST['trimestre'] ? $_POST['trimestre'] : '';
 	$valorNota = $_POST['valor-nota'] ? $_POST['valor-nota'] : '';
+	$notaId = $_POST['nota-id'] ? $_POST['nota-id'] : '';
 	
 ?>
 
@@ -19,6 +20,7 @@
 	<input type="hidden" name="materia-id">
 	<input type="hidden" name="trimestre">
 	<input type="hidden" name="valor-nota">
+	<input type="hidden" name="nota-id">
 </form>
 
 <script>
@@ -29,6 +31,7 @@
 	 	document.forms['redirect-form'].getElementsByTagName('input')[3].value = "<?php echo($materiaId) ?>";
 	 	document.forms['redirect-form'].getElementsByTagName('input')[4].value = "<?php echo($trimestre) ?>";
 	 	document.forms['redirect-form'].getElementsByTagName('input')[5].value = "<?php echo($valorNota) ?>";
+	 	document.forms['redirect-form'].getElementsByTagName('input')[6].value = "<?php echo($notaId) ?>";
         document.forms['redirect-form'].submit();
     }
 </script>
