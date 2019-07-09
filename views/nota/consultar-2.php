@@ -16,7 +16,7 @@
 	<form action="./pre-view.php?view=nota/consultar-3" method="POST">
 
 		<div class="form-row">
-		    <div class="form-group col-md-12">
+		    <div class="form-group ">
 		    	<label for="alumno">Elija alumno a quien consultar las notas</label>
 		    	<select class="form-control" id="alumno" name="alumno-id">
 		    		<option disabled>Seleccione un alumno</option>

@@ -29,7 +29,7 @@
 		<input type="hidden" name="alumno-id" value="<?php echo $nota['alumno_id'] ?>">
 
 		<div class="form-row">
-		    <div class="form-group col-md-12">
+		    <div class="form-group ">
 		    	<label for="nota">Asigne una nota al alumno</label>
 		    	<select class="form-control" id="nota" name="valor-nota">
 		    		<option disabled>Ingrese la nota</option>

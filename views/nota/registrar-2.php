@@ -16,7 +16,7 @@
 	<form action="./pre-view.php?view=nota/registrar-3" method="POST">
 
 		<div class="form-row">
-		    <div class="form-group col-md-12">
+		    <div class="form-group ">
 		    	<label for="alumno">Elija alumno a quien asignarle la nota</label>
 		    	<select class="form-control" id="alumno" name="alumno-id">
 		    		<option disabled>Seleccione un alumno</option>
@@ -30,7 +30,7 @@
 		</div>
 
 		<div class="form-row">
-		    <div class="form-group col-md-12">
+		    <div class="form-group ">
 		    	<label for="materia">Elija materia </label>
 		    	<select class="form-control" id="materia" name="materia-id">
 		    		<option disabled>Seleccione una materia</option>
@@ -44,7 +44,7 @@
 		</div>
 
 		<div class="form-row">
-		    <div class="form-group col-md-12">
+		    <div class="form-group ">
 		    	<label for="materia">Elija trimestre</label>
 		    	<select class="form-control" id="trimestre" name="trimestre">
 					<option disabled>Seleccione un trimestre</option>
@@ -56,7 +56,7 @@
 		</div>
 
 		<div class="form-row">
-		    <div class="form-group col-md-12">
+		    <div class="form-group ">
 		    	<label for="nota">Asigne una nota al alumno</label>
 		    	<select class="form-control" id="nota" name="valor-nota">
 		    		<option disabled>Ingrese la nota</option>

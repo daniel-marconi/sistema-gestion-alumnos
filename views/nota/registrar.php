@@ -14,7 +14,7 @@
 		<h5 class="mt-2">Buscar curso</h5>
 
 		<div class="form-row">
-			<div class="form-group col-md-12">
+			<div class="form-group ">
 				<label for="curso">Curso</label>
 				<select class="form-control" id="curso" name="curso-id">
 					<option disabled>Seleccione un curso</option>
