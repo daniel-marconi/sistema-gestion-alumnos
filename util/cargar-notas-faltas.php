@@ -19,6 +19,24 @@
 		}
 	}
 
-	echo "Se cargaron todas las notas";
+
+
+	$faltasMinimas = 3;
+	$faltasMaximas = 6;
+
+	for($alumno = 1; $alumno <= $cantidadDeAlumnos; $alumno++){
+		
+		$faltasTrimestre1 = mt_rand($faltasMinimas, $faltasMaximas);
+		$faltasTrimestre2 = mt_rand($faltasMinimas, $faltasMaximas);
+		$faltasTrimestre3 = mt_rand($faltasMinimas, $faltasMaximas);
+
+		$conectorBD->registrarInasistencias($alumno, $faltasTrimestre1, $faltasTrimestre2, $faltasTrimestre3);
+
+	}
+
+
+
+
+	echo "Se cargaron todas las notas y faltas";
 
  ?>

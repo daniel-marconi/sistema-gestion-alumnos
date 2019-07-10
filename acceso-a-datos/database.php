@@ -15,10 +15,13 @@
 		private $consultarNotaSQL= "SELECT * FROM notas WHERE alumno_id=:alumnoId AND materia_id=:materiaId AND trimestre=:trimestre";
 		private $notasPorAlumnoSQL = "SELECT * FROM notas WHERE alumno_id = :alumnoId ORDER BY materia_id, trimestre";
 		private $consultarNotaPorIdSQL = "SELECT * FROM notas WHERE id = :notaId";
+		private $registrarInasistenciasSQL = "INSERT INTO inasistencias (alumno_id, primer_trimestre, segundo_trimestre, tercer_trimestre) VALUES (:alumnoId, :trimestre1, :trimestre2, :trimestre3)";
+		private $consultarInasistenciasSQL = "SELECT * FROM inasistencias WHERE alumno_id=:alumnoId";
 		private $actualizarNotaSQL = "UPDATE notas SET valor=:valorNota WHERE id=:notaId";
 		private $eliminarNotaSQL = "DELETE FROM notas WHERE id=:notaId";
 
 		private $eliminarTodasLasNotasSQL = "DELETE FROM notas";
+		private $eliminarTodasLasInasistenciasSQL = "DELETE FROM inasistencias";
 
 		private function nuevaConexion(){
 			$nuevaConexion = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
@@ -147,5 +150,34 @@
 			$stmt = $conn->prepare($this->eliminarTodasLasNotasSQL);
 			$stmt->execute();
 		}
+
+		function eliminarTodasLasInasistencias(){
+			$conn = $this->nuevaConexion();
+			$stmt = $conn->prepare($this->eliminarTodasLasInasistenciasSQL);
+			$stmt->execute();
+		}
+
+
+
+		function registrarInasistencias($alumnoId, $trimestre1, $trimestre2, $trimestre3){
+			$conn = $this->nuevaConexion();
+			$sql = str_replace(":alumnoId", $alumnoId, $this->registrarInasistenciasSQL);
+			$sql = str_replace(":trimestre1", $trimestre1, $sql);
+			$sql = str_replace(":trimestre2", $trimestre2, $sql);
+			$sql = str_replace(":trimestre3", $trimestre3, $sql);
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+		}
+
+
+		function consultarInasistencias($alumnoId){
+			$conn = $this->nuevaConexion();
+			$sql = str_replace(":alumnoId", $alumnoId, $this->consultarInasistenciasSQL);
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+			$inasistencias = $stmt->get_result();
+			return $inasistencias->fetch_assoc();
+		}
+		
 	}
 ?>

@@ -4,5 +4,7 @@
 
 	$conectorBD->eliminarTodasLasNotas();
 
-	echo "Todas las notas eliminadas";
+	$conectorBD->eliminarTodasLasInasistencias();
+
+	echo "Todas las notas e inasistencias eliminadas";
 ?>

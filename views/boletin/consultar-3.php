@@ -7,6 +7,7 @@
 	$alumno = $conectorBD->consultarAlumno($alumnoId);
 	$materias = $conectorBD->todasLasMaterias();
 	$curso = $conectorBD->consultarCurso($alumno['curso_id']);
+	$inasistencias = $conectorBD->consultarInasistencias($alumnoId);
 
 	$nombreArray = explode(", ", $alumno['nombre']);
  ?>
@@ -119,13 +120,26 @@
 				}
 			 ?>
 
+			 <?php 
+			 	$inasistenciasPrimerTrimestre = $inasistencias['primer_trimestre'];
+			 	$inasistenciasSegundoTrimestre = $inasistencias['segundo_trimestre'];
+			 	$inasistenciasTercerTrimestre = $inasistencias['tercer_trimestre'];
+
+			 	if($inasistenciasPrimerTrimestre && $inasistenciasSegundoTrimestre && $inasistenciasTercerTrimestre){
+			 		$inasistenciasTotales = $inasistenciasPrimerTrimestre + $inasistenciasSegundoTrimestre + $inasistenciasTercerTrimestre;
+			 	} else {
+			 		$inasistenciasTotales = ' ';
+			 	}
+
+			  ?>
+
 			 <tr class="table-primary">
 				<th scope="row">Inasistencias</th>
-				<td>1</td>
-				<td>1</td>
-				<td>3</td>
+				<td><?php echo $inasistenciasPrimerTrimestre ?></td>
+				<td><?php echo $inasistenciasSegundoTrimestre ?></td>
+				<td><?php echo $inasistenciasTercerTrimestre ?></td>
 				<th scope="row">Total Inasistencias</th>
-				<td>4</td>
+				<td><?php echo $inasistenciasTotales ?></td>
 				<td></td>
 			 </tr>
 			
